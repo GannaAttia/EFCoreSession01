@@ -18,10 +18,14 @@ namespace EFCoreSession01
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=.;Database=EFCoreSession01;Trusted_Connection=True; TrustServerCertificate=True;");
+            optionsBuilder.UseSqlServer("Server=.;Database=BOOKSTORE;Trusted_Connection=True; TrustServerCertificate=True;");
         }
 
         public DbSet<Book> Books { get; set; }
+        public DbSet<Author> Authors { get; set; }
+
+        public DbSet<Category> Categories { get; set; }
+
 
     }
 }
